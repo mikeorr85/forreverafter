@@ -10,9 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20170130022150) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "invites", force: :cascade do |t|
+    t.string   "guest"
+    t.string   "address"
+    t.integer  "estimated_party_count"
+    t.string   "invite_code"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "rsvps", force: :cascade do |t|
+    t.integer  "invite_id"
+    t.integer  "guest_count"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["invite_id"], name: "index_rsvps_on_invite_id", using: :btree
+  end
+
+  add_foreign_key "rsvps", "invites"
 end

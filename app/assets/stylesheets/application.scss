@@ -37,6 +37,15 @@ $navbar-default-toggle-hover-bg: $tan;
 $navbar-default-toggle-icon-bar-bg: $spa;
 $navbar-default-toggle-border-color: $tan;
 
+$state-success-text: white;
+$state-success-bg: $mint;
+$state-info-text: white;
+$state-info-bg: $tan;
+$state-warning-text: white;
+$state-warning-bg: $spa;
+$state-danger-text: white;
+$state-danger-bg: black;
+
 /* End Bootstrap Overrides */
 
 @import "bootstrap";
@@ -51,8 +60,7 @@ html body{
 }
 
 .navbar-btn-margin {
-  margin-top: -7px;
-  margin-bottom: -5px;
+  margin-top: 6px;
 }
 
 .top-section {
@@ -101,4 +109,9 @@ html body{
 
 .top30 {
   margin-top: 30px;
+}
+
+.alert {
+  margin-bottom: 0;
+  border-radius: 0;
 }

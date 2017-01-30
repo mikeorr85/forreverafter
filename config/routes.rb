@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'things-to-do', to: "pages#things_to_do", as: "things-to-do"
   get 'registry', to: "pages#registry", as: "registry"
 
+  resources :rsvps, only: [:index, :create]
   resources :invites, only: [:show]
-  resources :rsvps, only: [:create]
+
 end

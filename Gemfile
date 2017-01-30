@@ -38,6 +38,9 @@ gem 'jbuilder', '~> 2.5'
 
 
 gem 'bootstrap-sass', '>= 3.3.7'
+gem 'activeadmin', '~> 1.0.0.pre4'
+# Active Admin master has preliminary support for Rails 5. To give it a try, these Gemfile changes may be needed:
+gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
