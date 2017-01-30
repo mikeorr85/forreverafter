@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Forreverafter</title>
+    <title>fORReverafter</title>
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Open+Sans:400,700" rel="stylesheet">
+
+    <meta name="application-name" content="Benefix"/>
+    <meta name="apple-mobile-web-app-title" content="Benefix">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +13,7 @@
   </head>
 
   <body>
+    <%= render partial: "shared/navbar" %>
     <%= yield %>
   </body>
 </html>
