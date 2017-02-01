@@ -1,7 +1,8 @@
 class Invite < ApplicationRecord
   validates :invite_code, uniqueness: true
   validates :guest, presence: true
-  validates :address, uniqueness: true
+  validates :last_name, presence: true
+  validates :address, presence: true
 
   after_create :generate_invite_code
 
