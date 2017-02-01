@@ -1,0 +1,48 @@
+(function ($, window) {
+  window.Forreverafter = window.Forreverafter || {}
+
+  Forreverafter.Rsvp = {
+    init: function() {
+      Forreverafter.Rsvp.handleInviteLookup();
+    },
+    handleInviteLookup: function() {
+      $('#startRsvpBtn').on('click', function (e) {
+        e.preventDefault();
+
+        var inviteCode = $('#inviteCode').val();
+        var lastName = $('#lastName').val();
+
+        $.ajax({
+          method: "GET",
+          url: "/invites/lookup",
+          data: {
+            invite: {
+              invite_code: inviteCode,
+              last_name: lastName
+            }
+          },
+          success: function(r) {
+            if (r === null) {
+              location.reload();
+            } else {
+              $('#inviteJumbotron').addClass('hidden');
+              $('#rsvpJumbotron').removeClass('hidden');
+              $('#inviteId').val(r.id);
+              $('#guestName').text(r.guest);
+              $('#rsvp_guest_count').val(r.estimated_party_count);
+            }
+          },
+          error: function(err) {
+            console.error(err);
+          }
+        });
+
+      });
+    }
+  }
+
+  window.Forreverafter = Forreverafter;
+  $(document).ready( Forreverafter.Rsvp.init );
+
+})(jQuery, this);
+

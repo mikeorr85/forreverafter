@@ -1,17 +1,17 @@
 class RsvpsController < ApplicationController
 
-  def index
-    flash[:info] = "Thank you for your RSVP. We're looking forward to seeing you!"
+  def new
+    @rsvp = Rsvp.new
   end
 
   def create
     @rsvp = Rsvp.new(rsvp_params)
     if @rsvp.save
-      redirect_to root_path, notice: "Thank you for your RSVP!"
+      redirect_to root_path
       flash[:info] = "Thank you for your RSVP. We're looking forward to seeing you!"
     else
       flash[:danger] = @rsvp.errors.full_messages.to_sentence
-      render :index
+      render :new
     end
   end
 
