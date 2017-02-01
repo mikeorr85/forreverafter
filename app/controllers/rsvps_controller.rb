@@ -7,8 +7,13 @@ class RsvpsController < ApplicationController
   def create
     @rsvp = Rsvp.new(rsvp_params)
     if @rsvp.save
+      if (@rsvp.guest_count.nil? || @rsvp.guest_count < 1)
+        flash[:warning] = "Sorry that you are not able to make. Thank you for your RSVP!"
+      else
+        flash[:warning] = "Thank you for your RSVP. We're looking forward to seeing you!"
+      end
+
       redirect_to root_path
-      flash[:info] = "Thank you for your RSVP. We're looking forward to seeing you!"
     else
       flash[:danger] = @rsvp.errors.full_messages.to_sentence
       render :new
