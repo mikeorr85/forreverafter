@@ -33,9 +33,9 @@ $navbar-default-link-hover-color: $tan;
 $navbar-default-link-active-color: $tan;
 $navbar-default-bg: $pool;
 $navbar-default-brand-color: black;
-$navbar-default-toggle-hover-bg: $tan;
+$navbar-default-toggle-hover-bg: white;
 $navbar-default-toggle-icon-bar-bg: $spa;
-$navbar-default-toggle-border-color: $tan;
+$navbar-default-toggle-border-color: white;
 
 $state-success-text: white;
 $state-success-bg: $mint;
@@ -91,7 +91,7 @@ p.small-text {
 }
 
 .schedule-section {
-//  background: $tan;
+  background: $tan;
   margin-top: -20px;
   padding-top: 30px;
   padding-bottom: 30px;
