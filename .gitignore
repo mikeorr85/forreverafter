@@ -19,5 +19,8 @@
 # ignore database
 /config/database.yml
 
+#ignore cloudinary creds
+/config/cloudinary.yml
+
 # precompiles assets
 public/assets/**
