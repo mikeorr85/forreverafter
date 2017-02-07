@@ -20,7 +20,7 @@
 /config/database.yml
 
 #ignore cloudinary creds
-/config/cloudinary.yml
+/config/cloudinary_back.yml
 
 # precompiles assets
 public/assets/**
