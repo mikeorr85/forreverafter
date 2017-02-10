@@ -89,6 +89,15 @@ p.small-text {
     border: 1px solid $pool;
     background-color: rgba(0,0,0,0.4);
   }
+
+  a#scrollLink {
+    color: white;
+  }
+
+  i.arrow {
+    font-size: 18px;
+    color: white;
+  }
 }
 
 .schedule-section {
