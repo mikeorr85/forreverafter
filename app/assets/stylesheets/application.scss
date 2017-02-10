@@ -96,6 +96,10 @@ p.small-text {
   margin-top: -20px;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  .well {
+    min-height: 170px;
+  }
 }
 
 footer.footer {
@@ -144,4 +148,10 @@ footer.footer {
 
 .jumbotron.rsvp {
   background-color: $tan;
+}
+
+.container.things-to-do {
+  .panel {
+    min-height: 250px;
+  }
 }
