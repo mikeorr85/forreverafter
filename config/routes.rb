@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get 'registry', to: "pages#registry", as: "registry"
 
   resources :rsvps, only: [:new, :create]
+  get "/rsvp" => "rsvps#new"
+
   resources :invites do
     collection do
       get 'lookup'
