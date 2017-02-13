@@ -15,7 +15,8 @@ class Invite < ApplicationRecord
   def generate_invite_code
     while self.invite_code.nil?
       random_code = SecureRandom.urlsafe_base64(6).upcase
-      if Invite.exists?(invite_code: random_code)
+
+      if random_code.include?("-") || random_code.include?("_") || Invite.exists?(invite_code: random_code)
         self.invite_code = nil
       else
         self.invite_code = random_code
