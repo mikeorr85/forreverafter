@@ -1,6 +1,6 @@
 ActiveAdmin.register Invite do
 
-  permit_params :last_name, :guest, :address, :invite_code, :estimated_party_count
+  permit_params :last_name, :guest, :address, :address2, :invite_code, :estimated_party_count
 
   index do
     selectable_column
@@ -8,6 +8,7 @@ ActiveAdmin.register Invite do
     column :last_name
     column :guest
     column :address
+    column :address2
     column :invite_code
     column :estimated_party_count
     actions
@@ -22,6 +23,7 @@ ActiveAdmin.register Invite do
       f.input :last_name
       f.input :guest
       f.input :address
+      f.input :address2
       f.input :estimated_party_count
     end
     f.actions

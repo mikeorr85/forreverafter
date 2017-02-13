@@ -3,6 +3,7 @@ class Invite < ApplicationRecord
   validates :guest, presence: true
   validates :last_name, presence: true
   validates :address, presence: true
+  validates :address2, presence: true
 
   before_create :upcase_last_name
   after_create :generate_invite_code
