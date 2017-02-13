@@ -19,11 +19,12 @@
 $pool: #00cccc;
 $mint: #a9eae0;
 $tan: #c9c084;
+$suit-gray: #d4d4d4;
 $spa: #11eddf;
 
 $brand-primary: $pool;
 $brand-success: $mint;
-$brand-info: $tan;
+$brand-info: $suit-gray;
 $brand-warning: $spa;
 $brand-danger: black;
 
@@ -40,7 +41,7 @@ $navbar-default-toggle-border-color: white;
 $state-success-text: white;
 $state-success-bg: $mint;
 $state-info-text: white;
-$state-info-bg: $tan;
+$state-info-bg: $suit-gray;
 $state-warning-text: white;
 $state-warning-bg: $spa;
 $state-danger-text: white;
@@ -101,7 +102,6 @@ p.small-text {
 }
 
 .schedule-section {
-//  background: $tan;
   margin-top: -20px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -160,7 +160,7 @@ footer.footer {
 }
 
 .jumbotron.rsvp {
-  background-color: $tan;
+  background-color: $suit-gray;
 }
 
 .container.things-to-do {
