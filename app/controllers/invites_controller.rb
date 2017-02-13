@@ -8,15 +8,15 @@ class InvitesController < ApplicationController
     if @invite.nil?
       flash[:danger] = "We couldn't find the invite. Please double check the last name and code."
     else
-      @rsvp = Rsvp.where(id: @invite.id).first
+      @rsvp = Rsvp.where(invite_id: @invite.id).first
 
       if @rsvp.present?
         @invite = nil # return nil so JS doesn't show rsvp form
 
         if @rsvp.guest_count < 1
-          flash[:danger] = "We already have booked as not attending. Please contact Mike or JoRae to change your RSVP."
+          flash[:danger] = "We already have you booked as not attending. Please contact Mike or JoRae to change your RSVP."
         else
-          flash[:danger] = "We already have booked for #{@rsvp.guest_count}. Please contact Mike or JoRae to change your RSVP or guest count."
+          flash[:danger] = "We already have you booked for #{@rsvp.guest_count}. Please contact Mike or JoRae to change your RSVP or guest count."
         end
       end
     end
