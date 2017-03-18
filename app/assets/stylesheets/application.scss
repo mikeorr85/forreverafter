@@ -161,6 +161,17 @@ footer.footer {
 
 .jumbotron.rsvp {
   background-color: $suit-gray;
+
+  input[type=number] {
+    width: 100px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  input[type=radio] {
+    margin-top: 1px;
+  }
+
 }
 
 .container.things-to-do {

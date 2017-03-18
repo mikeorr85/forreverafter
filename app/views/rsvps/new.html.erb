@@ -35,12 +35,34 @@
 
           <h3 id="guestName">Guest Name</h3>
 
-          <div class="form-group">
-            <%= f.label :guest_count, "Total Guests" %>
-            <%= f.number_field :guest_count, class: "bold" %>
+          <div class="row" id="isAttending">
+            <div class="col-xs-12 col-sm-12">
+              <label class="radio-inline">
+                <input type="radio" name="optradio" value="yes" checked="true">We'll be there!
+              </label>
+              <label class="radio-inline">
+                <input type="radio" name="optradio" value="no">We cannot make it.
+              </label>
+            </div>
           </div>
 
-          <p class="bold small-text">Please complete the RSVP with 0 if you are unable to make it.</p>
+          <div class="row" id="rsvpDetails">
+            <div class="col-xs-12 col-sm-12">
+
+              <div class="form-group top10">
+                <%= f.label :guest_count, "Total Guests: " %>
+                <%= f.number_field :guest_count, class: "bold" %>
+              </div>
+
+              <p class="bold small-text">We will have a BBQ buffet for dinner. Let us know how many vegetarians would like smoked tofu with side1 and side2.</p>
+
+              <div class="form-group top10">
+                <%= f.label :vegetarian_count, "Vegetarians: " %>
+                <%= f.number_field :vegetarian_count, class: "bold", value: 0 %>
+              </div>
+
+            </div>
+          </div>
 
           <%= f.submit "Complete RSVP", class: "btn btn-lg btn-danger bold pull-right" %>
 

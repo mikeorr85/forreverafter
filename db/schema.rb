@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170213060453) do
+ActiveRecord::Schema.define(version: 20170318153224) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,8 +60,9 @@ ActiveRecord::Schema.define(version: 20170213060453) do
   create_table "rsvps", force: :cascade do |t|
     t.integer  "invite_id"
     t.integer  "guest_count"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
+    t.integer  "vegetarian_count", default: 0
     t.index ["invite_id"], name: "index_rsvps_on_invite_id", using: :btree
   end
 
