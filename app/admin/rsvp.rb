@@ -7,6 +7,7 @@ ActiveAdmin.register Rsvp do
     id_column
     column :guest_count
     column :vegetarian_count
+    column :wants_breakfast
     column "Guest" do |rsvp|
       rsvp.invite.guest
     end
@@ -14,5 +15,6 @@ ActiveAdmin.register Rsvp do
 
   filter :guest_count
   filter :vegetarian_count
+  filter :wants_breakfast
 
 end

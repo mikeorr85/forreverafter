@@ -61,6 +61,15 @@
                 <%= f.number_field :vegetarian_count, class: "bold", value: 0 %>
               </div>
 
+              <p class="bold small-text">We would like to provide a continental breakfast Sunday morning at 10 AM in the church hall. See the Home page for the address.</p>
+
+              <div class="form-group top10">
+                <%= f.radio_button :wants_breakfast, true, :checked => true %>
+                <%= label :attending_breakfast_yes, "Attending breakfast" %>
+                <%= f.radio_button :wants_breakfast, false %>
+                <%= label :attending_breakfast_no, "Not attending breakfast" %>
+              </div>
+
             </div>
           </div>
 
