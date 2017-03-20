@@ -54,14 +54,14 @@
                 <%= f.number_field :guest_count, class: "bold" %>
               </div>
 
-              <p class="bold small-text">We will have a BBQ buffet for dinner. Let us know how many vegetarians would like smoked tofu with side1 and side2.</p>
+              <p class="bold small-text">We will have a BBQ buffet for dinner, but a vegetarian lasagna option is available as well. Please let us know how many vegetarian options are needed for dinner. </p>
 
               <div class="form-group top10">
-                <%= f.label :vegetarian_count, "Vegetarians: " %>
+                <%= f.label :vegetarian_count, "Vegetarian Dinners: " %>
                 <%= f.number_field :vegetarian_count, class: "bold", value: 0 %>
               </div>
 
-              <p class="bold small-text">We would like to provide a continental breakfast Sunday morning at 10 AM in the church hall. See the Home page for the address.</p>
+              <p class="bold small-text">We will be providing a continental breakfast Sunday morning in the church hall. Please see the Home page schedule for details.</p>
 
               <div class="form-group top10">
                 <%= f.radio_button :wants_breakfast, true, :checked => true %>
