@@ -1,0 +1,28 @@
+<h1>Counts</h1>
+<table class="table">
+  <tr>
+    <td><h2>Invite Count: <%= @invite_count %></h2></td>
+  </tr>
+  <tr>
+    <td><h2>Invite Guest Count: <%= @invite_guest_count %></h2></td>
+  </tr>
+  <tr>
+    <td><h2>RSVP Count: <%= @rsvp_count %></h2></td>
+  </tr>
+  <tr>
+    <td><h2>RSVP Guest Count: <%= @rsvp_guest_count %></h2></td>
+  </tr>
+  <tr>
+    <td><h2>Vegetarian Count: <%= @vegetarian_count %></h2></td>
+  </tr>
+</table>
+
+<h1>Latest Invites</h1>
+<ul>
+  <% @latest_rsvps.each do |rsvp| %>
+     <li>
+       <span><%= rsvp.invite.guest %>: </span>
+       <span><%= rsvp.guest_count %></span>
+     </li>
+  <% end %>
+</ul>
