@@ -8,6 +8,8 @@ class Invite < ApplicationRecord
   before_create :upcase_last_name
   after_create :generate_invite_code
 
+  has_one :rsvp
+
   def upcase_last_name
     self.last_name = self.last_name.upcase
   end
