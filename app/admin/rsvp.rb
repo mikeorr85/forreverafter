@@ -11,6 +11,7 @@ ActiveAdmin.register Rsvp do
     column "Guest" do |rsvp|
       rsvp.invite.guest
     end
+    actions
   end
 
   filter :guest_count
@@ -19,8 +20,11 @@ ActiveAdmin.register Rsvp do
 
   form do |f|
     f.inputs "RSVP Details" do
-      f.input :invite_id, label: 'Invite', as: :select,
-              collection: Invite.eager_load(:rsvp).merge(Rsvp.where(id: nil)).map{|i| ["#{i.guest}", i.id]}
+      if f.object.new_record?
+        f.input :invite_id, label: 'Invite', as: :select,
+                collection: Invite.eager_load(:rsvp).merge(Rsvp.where(id: nil)).map{|i| ["#{i.guest}", i.id]}
+      end
+
       f.input :guest_count
       f.input :vegetarian_count
     end
